@@ -8,14 +8,13 @@
 <p align = "center">
     <img alt="GitHub top language" src ="https://img.shields.io/github/languages/top/SABoev20/flutter-project?style=for-the-badge">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/SABoev20/flutter-project?style=for-the-badge">
-      <img alt="Github languages count" src="https://img.shields.io/github/languages/count/SABoev20/flutter-project?style=for-the-badge">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/SABoev20/flutter-project?style=for-the-badge">
 </p>
 <br>
 
 ## 📋 Description
   
-<p align="center">My Flutter project is an android travel guide aplication. Using a public API, the app can show you  the best destinations from the chosen of you location all around Europe.</p>
+<p align="center">My Flutter project is an android travel guide apпlication. Using a public API, the app can show you  the best destinations from the chosen of you location all around Europe.</p>
 
 
 ## 🚀 Tech Stack 
@@ -27,7 +26,7 @@
 ## 🔨 Tools
   <p align="left"> 
     <a href="https://code.visualstudio.com/"><img src="https://img.icons8.com/color/51/null/visual-studio-code-2019.png"/></a>
-    <a href="https://developer.android.com/"><img width="4.6%" src="https://img.icons8.com/?size=512&id=04OFrkjznvcd&format=png" alt="Android Studio"/></a>
+    <a href="https://developer.android.com/"><img width="4.8%" src="https://img.icons8.com/?size=512&id=04OFrkjznvcd&format=png" alt="Android Studio"/></a>
     <a href="https://www.figma.com/"><img src="https://img.icons8.com/fluency/48/null/figma.png"/></a>
     <a href="https://www.microsoft.com/en-ww/microsoft-365/word"><img src="https://img.icons8.com/fluency/48/000000/microsoft-word-2019.png" alt="MS Word logo" width=48px /></a>
     <a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint"><img src="https://img.icons8.com/fluency/48/000000/microsoft-powerpoint-2019.png" alt="MS PowerPoint logo" width=48px />
