@@ -11,11 +11,11 @@ class NasaDailyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Nasa Daily',
+      title: 'StellarSync',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         scrollbarTheme: ScrollbarThemeData(
-          thumbColor: MaterialStateProperty.all(Colors.grey),
+          thumbColor: MaterialStateProperty.all(Colors.white12),
         ),
       ),
       home: NasaDailyScreen(),
@@ -41,7 +41,7 @@ class _NasaDailyScreenState extends State<NasaDailyScreen> {
   }
 
   Future<void> fetchNasaDailyPhoto() async {
-    final response = await http.get(Uri.parse('https://api.nasa.gov/planetary/apod?api_key=IORgClb8l9mBWULEl0XVw1HTPrMWaV98v4OqFl53&date=2023-06-03'));
+    final response = await http.get(Uri.parse('https://api.nasa.gov/planetary/apod?api_key=IORgClb8l9mBWULEl0XVw1HTPrMWaV98v4OqFl53'));
 
     if (response.statusCode == 200) {
       final jsonData = jsonDecode(response.body);
@@ -62,11 +62,12 @@ class _NasaDailyScreenState extends State<NasaDailyScreen> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.black,
-          toolbarHeight: 50,
+          toolbarHeight: 60,
           title: Text(
-              'Nasa Daily',
+              ' NASA Daily',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 26,
+                color: Colors.white,
                 fontWeight: FontWeight.bold,
               )
           )
@@ -126,7 +127,7 @@ class _NasaDailyScreenState extends State<NasaDailyScreen> {
                                 color: Colors.white38,
                               ),
                             ),
-                            SizedBox(height: 8),
+                            SizedBox(height: 18),
                             Text(
                               _description,
                               style: TextStyle(
@@ -140,6 +141,7 @@ class _NasaDailyScreenState extends State<NasaDailyScreen> {
                       Container(
                         color: Colors.black,
                         width: 420,
+                        height: 50,
                         padding: EdgeInsets.all(16),
                         child: Text(
                           'Credits: NASA',
