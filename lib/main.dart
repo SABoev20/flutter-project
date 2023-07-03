@@ -20,52 +20,7 @@ class NasaDailyApp extends StatelessWidget {
           thumbColor: MaterialStateProperty.all(Colors.white12),
         ),
       ),
-      home: NasaDailyScreen(),
-    );
-  }
-}
-
-class NasaDailyScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        toolbarHeight: 60,
-        title: Text(
-          'NASA Daily',
-          style: TextStyle(
-            fontSize: 26,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.black,
-              Colors.black,
-              Colors.deepPurple,
-            ],
-          ),
-        ),
-        child: Center(
-          child: ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HomePage()),
-              );
-            },
-            child: Text('Go to Home Page'),
-          ),
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }
@@ -76,14 +31,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
-  String _title = '';
-  String _date = '';
-  String _description = '';
-  String _imageUrl = '';
+  String _title = 'Welcome To StellarSync!';
+  String _date = 'Here you can find NASA daily blogs.';
+  String _description = '\n \n \n Select news and blogs from all over the years:';
+  String _imageUrl = 'https://cdn.discordapp.com/attachments/900689339179216926/1125534624077062254/logo.jpg';
 
   DateTime _selectedDay = DateTime.now();
   DateTime _focusedDay = DateTime.now();
-  CalendarFormat _calendarFormat = CalendarFormat.month;
+  CalendarFormat _calendarFormat = CalendarFormat.week;
 
   Map<DateTime, List<dynamic>> _events = {};
 
@@ -114,6 +69,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     fetchNasaDailyPhoto(selectedDay);
   }
 
+  void _toggleCalendarVisibility() {
+    setState(() {
+      _calendarFormat = _calendarFormat == CalendarFormat.month ? CalendarFormat.week : CalendarFormat.month;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,11 +83,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         backgroundColor: Colors.black,
         toolbarHeight: 60,
         title: Text(
-          'NASA Daily',
+          "StellarSync",
           style: TextStyle(
             fontSize: 26,
+            fontFamily: 'Inter',
+            fontWeight: FontWeight.w400,
             color: Colors.white,
-            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -190,20 +152,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     ],
                   ),
                 ),
-                Container(
-                  color: Colors.black,
-                  width: 420,
-                  height: 50,
-                  padding: EdgeInsets.all(16),
-                  child: Text(
-                    'Credits: NASA',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
                 SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -231,7 +179,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           selectedTextStyle: TextStyle(color: Colors.white),
                           weekendTextStyle: TextStyle(color: Colors.white),
                           holidayTextStyle: TextStyle(color: Colors.white),
-                          outsideTextStyle: TextStyle(color: Colors.grey),
+                          outsideTextStyle: TextStyle(color: Colors.white70),
                         ),
                         headerStyle: HeaderStyle(
                           formatButtonVisible: false,
@@ -252,7 +200,22 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           headerPadding: EdgeInsets.symmetric(vertical: 16),
                         ),
                       ),
+                      SizedBox(height: 20),
                     ],
+                  ),
+                ),
+                Container(
+                  color: Colors.black,
+                  width: 420,
+                  height: 50,
+                  padding: EdgeInsets.all(16),
+                  child: Text(
+                    'Credits: NASA',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ],
