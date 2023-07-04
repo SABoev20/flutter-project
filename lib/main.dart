@@ -5,10 +5,10 @@ import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 void main() {
-  runApp(NasaDailyApp());
+  runApp(StellarSyncApp());
 }
 
-class NasaDailyApp extends StatelessWidget {
+class StellarSyncApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,21 +31,20 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
-  String _title = 'Welcome To StellarSync!';
+  String _title = 'Welcome!';
   String _date = 'Here you can find NASA daily blogs.';
   String _description = '\n \n \n Select news and blogs from all over the years:';
-  String _imageUrl = 'https://cdn.discordapp.com/attachments/900689339179216926/1125534624077062254/logo.jpg';
+  String _imageUrl = 'https://cdn.discordapp.com/attachments/900689339179216926/1125927505463890001/homeLogo.png';
 
   DateTime _selectedDay = DateTime.now();
   DateTime _focusedDay = DateTime.now();
   CalendarFormat _calendarFormat = CalendarFormat.week;
 
-  Map<DateTime, List<dynamic>> _events = {};
-
-  Future<void> fetchNasaDailyPhoto(DateTime date) async {
-    final formattedDate = DateFormat('yyyy-MM-dd').format(date);
+  Future<void> fetchNasaData(DateTime date) async {
+      String apiKey = 'IORgClb8l9mBWULEl0XVw1HTPrMWaV98v4OqFl53';
+      final formattedDate = DateFormat('yyyy-MM-dd').format(date);
     final response = await http.get(
-      Uri.parse('https://api.nasa.gov/planetary/apod?api_key=IORgClb8l9mBWULEl0XVw1HTPrMWaV98v4OqFl53&date=$formattedDate'),
+      Uri.parse('https://api.nasa.gov/planetary/apod?api_key=$apiKey&date=$formattedDate'),
     );
 
     if (response.statusCode == 200) {
@@ -57,7 +56,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         _imageUrl = jsonData['url'];
       });
     } else {
-      throw Exception('Failed to fetch NASA daily photo');
+      throw Exception('Failed to fetch NASA data');
     }
   }
 
@@ -66,13 +65,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       _selectedDay = selectedDay;
       _focusedDay = focusedDay;
     });
-    fetchNasaDailyPhoto(selectedDay);
-  }
-
-  void _toggleCalendarVisibility() {
-    setState(() {
-      _calendarFormat = _calendarFormat == CalendarFormat.month ? CalendarFormat.week : CalendarFormat.month;
-    });
+    fetchNasaData(selectedDay);
   }
 
   @override
