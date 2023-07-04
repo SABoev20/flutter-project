@@ -1,10 +1,9 @@
-<h1 align="center">Flutter Project</h1>
-<br>
+<h1 align="center">StellarSync</h1>
 <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/1096444593039487077/1120481658416676925/Screenshot_2023-06-19_231436.png"/>
+  <img src="https://github.com/SABoev20/flutter-project/blob/main/assets/logo.png"/>
 </p>
 <br>
-
+<br>
 <p align = "center">
     <img alt="GitHub top language" src ="https://img.shields.io/github/languages/top/SABoev20/flutter-project?style=for-the-badge">
     <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/SABoev20/flutter-project?style=for-the-badge">
@@ -14,7 +13,7 @@
 
 ## 📋 Description
   
-<p align="center">My Flutter project is an android travel guide application. Using a public API, the app can show you  the best destinations from the chosen of you location all around Europe.</p>
+<p align="center">My Flutter project is an android space news application. Using the public NASA API, the app can show you NASA's blogs and daily images from a selected date.</p>
 
 
 ## 🚀 Tech Stack 
@@ -35,23 +34,8 @@
   
   
 ## 📰 Docs
-  - [Documentation]()
-  - [Design documentation]()
-  - [Presentation]()
-
-## 📑 Diagrams
-<details close>
-<summary>Application Scheme</summary>
-<br>
-<img src ="">
-</details>
-
-<details close>
-<summary>Tech Stack Diagram</summary>
-<br>
-<img src ="">
-</details>
-
+  - [Documentation](https://github.com/SABoev20/flutter-project/blob/main/documents/Documentation.docx)
+  - [Presentation](https://github.com/SABoev20/flutter-project/blob/main/documents/Presentation.pptx)
 
 ## 🔧 Installation
 
@@ -64,8 +48,8 @@ git clone https://github.com/SYSolakov20/onsens.git
 
  ## 🎬 Demo of the project 
   
-  <p align="center">
-  <img src="https://cdn.discordapp.com/attachments/900689339179216926/1120485816507056218/DemoAppDesign.png" width = "900px" >
+   <p align="center">
+  <img src="https://github.com/SABoev20/flutter-project/blob/main/assets/demo.png" width = "400px" >
   </p>
 
 ## 🔑 Application Access
@@ -73,5 +57,5 @@ git clone https://github.com/SYSolakov20/onsens.git
 *You can access the application by downloading the release on github :)*
  
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer&customColorList=2,3,12,19,21,23,26" width="1200px"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer&customColorList=1,6,20,22,24" width="1200px"/>
 </p>
