@@ -5,9 +5,9 @@
 <br>
 <br>
 <p align = "center">
-    <img alt="GitHub top language" src ="https://img.shields.io/github/languages/top/SABoev20/flutter-project?style=for-the-badge">
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/SABoev20/flutter-project?style=for-the-badge">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/SABoev20/flutter-project?style=for-the-badge">
+    <img alt="GitHub top language" src ="https://img.shields.io/github/languages/top/martindobrev/bubolechka2?style=for-the-badge">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/SYSolakov20/Flutter-Weather-App?style=for-the-badge">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/SYSolakov20/Flutter-Weather-App?style=for-the-badge">
 </p>
 <br>
 
